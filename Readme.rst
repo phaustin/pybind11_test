@@ -1,5 +1,5 @@
-To buid and test on osx
-+++++++++++++++++++++++
+To build and test on osx
+++++++++++++++++++++++++
 
 Using pip
 =========
@@ -32,9 +32,15 @@ Using conda
     git clone https://github.com/phaustin/pybind11_test.git
     pip uninstall hello-pybind
     cd pyind11_test
+    conda activate test
     conda build .
 
-* build fails with errors like::
+* should print out::
+
+    running run_test.py
+    inside hello_pybind __init__.py
+    sum of 1 and 2: 3
+
 
 
 
