@@ -1,21 +1,40 @@
-Basic install/test for pybind11 with miniconda3 4.10 and conda build
+To buid and test on osx
++++++++++++++++++++++++
 
-To build and test with pip (osx):
+Using pip
+=========
 
-https://raw.githubusercontent.com/phaustin/pybind11_test/osx/environment_osx.yml
+* Using miniconda3 4.10
 
-conda env create environment_osx.yml
+* Download the environment::
 
-conda activate test
+    wget https://raw.githubusercontent.com/phaustin/pybind11_test/osx/environment_osx.yml
 
-CXX=$(which $CXX);pip install git+https://github.com/phaustin/pybind11_test.git@osx#egg=pybind_test
+    conda env create -f environment_osx.yml
 
-python -c 'from hello_pybind.do_add import add_them;print(add_them(1,2))'
+    conda activate test
 
-prints::
+    CXX=$(which $CXX);pip install git+https://github.com/phaustin/pybind11_test.git@osx#egg=pybind_test
 
-  inside hello_pybind __init__.py
-  3
+    python -c 'from hello_pybind.do_add import add_them;print(add_them(1,2))'
+
+  prints::
+
+    inside hello_pybind __init__.py
+    3
+
+
+Using conda
+===========
+
+* clone the repo and checkout the osx branch::
+
+    git clone https://github.com/phaustin/pybind11_test.git
+    pip uninstall hello-pybind
+    cd pyind11_test
+    conda build .
+
+* build fails with errors like::
 
 
 
