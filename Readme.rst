@@ -1,6 +1,6 @@
-Show how to use pybind11 to wrap c++ standard library calls in src/main.cpp and tests/test_pha.py
+Basic install/test for pybind11 with miniconda3 4.10 and conda build
 
-To build and test do:
+To reproduce:
 
-conda build .
+
 
