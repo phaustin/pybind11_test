@@ -16,6 +16,8 @@ Using pip
 
     CXX=$(which $CXX);pip install git+https://github.com/phaustin/pybind11_test.git@osx#egg=pybind_test
 
+    mkdir test
+    cd test
     python -c 'from hello_pybind.do_add import add_them;print(add_them(1,2))'
 
   prints::
@@ -32,6 +34,7 @@ Using conda
     git clone https://github.com/phaustin/pybind11_test.git
     pip uninstall hello-pybind
     cd pyind11_test
+    conda env create -f environment_osx.yml (if not created for pip install)
     conda activate test
     conda build .
 

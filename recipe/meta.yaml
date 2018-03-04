@@ -28,18 +28,6 @@ requirements:
     - libcxx
     - python
 
-test:
-  requires:
-    - libcxx
-    - pytest
-    
-  files:
-    - ../tests/test_pha.py
-    - ../tests/__init__.py
-    
-  imports:
-    - hello_pybind
-
 about:
   summary: An example project built with pybind11.
   license_file: LICENSE
