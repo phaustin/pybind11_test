@@ -1,5 +1,5 @@
-To build and test on osx
-++++++++++++++++++++++++
+To build and test on linux
+++++++++++++++++++++++++++
 
 Using pip
 =========
@@ -8,13 +8,13 @@ Using pip
 
 * Download the environment::
 
-    wget https://raw.githubusercontent.com/phaustin/pybind11_test/osx/environment_osx.yml
+    wget https://raw.githubusercontent.com/phaustin/pybind11_test/linux/environment_linux.yml
 
-    conda env create -f environment_osx.yml
+    conda env create -f environment_linux.yml
 
     conda activate test
 
-    CXX=$(which $CXX);pip install git+https://github.com/phaustin/pybind11_test.git@osx#egg=pybind_test
+    CXX=$(which $CXX);pip install git+https://github.com/phaustin/pybind11_test.git@linux#egg=pybind_test
 
     python -c 'from hello_pybind.do_add import add_them;print(add_them(1,2))'
 
