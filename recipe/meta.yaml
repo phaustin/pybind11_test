@@ -25,20 +25,13 @@ requirements:
 
 
   run:
-    - libcxx
+    - libstdcxx-ng
     - python
 
 test:
   requires:
-    - libcxx
+    - libstdcxx-ng
     - pytest
-    
-  files:
-    - ../tests/test_pha.py
-    - ../tests/__init__.py
-    
-  imports:
-    - hello_pybind
 
 about:
   summary: An example project built with pybind11.

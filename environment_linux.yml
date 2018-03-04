@@ -1,10 +1,56 @@
-name: test
-channels:
-  - defaults
-  - conda-forge
-dependencies:
-  - pybind11=2.2.2
-  - gxx_linux-64=7.2.0
-  - conda-build=3.6.0
-prefix: /Users/phil/ma36/envs/test
+To build and test on linux
+++++++++++++++++++++++++++
+
+Using pip
+=========
+
+* Using miniconda3 4.10
+
+* Download the environment::
+
+    wget https://raw.githubusercontent.com/phaustin/pybind11_test/linux/environment_linux.yml
+
+    conda env create -f environment_linux.yml
+
+    conda activate test
+
+    CXX=$(which $CXX);pip install git+https://github.com/phaustin/pybind11_test.git@linux#egg=pybind_test
+
+    mkdir test
+    cd test
+    python -c 'from hello_pybind.do_add import add_them;print(add_them(1,2))'
+
+  prints::
+
+    inside hello_pybind __init__.py
+    3
+
+
+Using conda
+===========
+
+* clone the repo and checkout the linux branch::
+
+    git clone https://github.com/phaustin/pybind11_test.git
+    git checkout linux
+    cd pyind11_test
+    conda env create -f environment_linux.yml  (unless already done for pip install)
+    conda activate test
+    pip uninstall hello-pybind
+
+    conda build .
+
+* should print out::
+
+    running run_test.py
+    inside hello_pybind __init__.py
+    sum of 1 and 2: 3
+
+
+
+
+
+
+
+
 

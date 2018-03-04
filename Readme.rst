@@ -16,6 +16,8 @@ Using pip
 
     CXX=$(which $CXX);pip install git+https://github.com/phaustin/pybind11_test.git@linux#egg=pybind_test
 
+    mkdir test
+    cd test
     python -c 'from hello_pybind.do_add import add_them;print(add_them(1,2))'
 
   prints::
