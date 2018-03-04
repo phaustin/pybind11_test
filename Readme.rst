@@ -34,6 +34,7 @@ Using conda
     git clone https://github.com/phaustin/pybind11_test.git
     pip uninstall hello-pybind
     cd pyind11_test
+    conda env create -f environment_linux.yml  (if not created for pip install)
     conda activate test
     conda build .
 
