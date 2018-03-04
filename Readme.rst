@@ -1,15 +1,14 @@
-To build and test on osx
-++++++++++++++++++++++++
+Building pybind11 extensions using pip or conda
++++++++++++++++++++++++++++++++++++++++++++++++
 
 Using pip
 =========
 
 * Using miniconda3 4.10
 
-* Download the environment::
+* For osx:
 
-    wget https://raw.githubusercontent.com/phaustin/pybind11_test/osx/environment_osx.yml
-
+    wget https://raw.githubusercontent.com/phaustin/pybind11_test/environment_osx.yml
     conda env create -f environment_osx.yml
 
     conda activate test

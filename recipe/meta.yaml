@@ -25,7 +25,8 @@ requirements:
 
 
   run:
-    - libcxx
+    - libcxx # [osx]
+    - libstdcxx-ng # [linux]
     - python
 
 about:
