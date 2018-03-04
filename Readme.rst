@@ -1,6 +1,9 @@
-Show how to use pybind11 to wrap c++ standard library calls in src/main.cpp and tests/test_pha.py
+pybind11 example using anaconda compiler tools
+++++++++++++++++++++++++++++++++++++++++++++++
 
-To build and test do:
+* `Linux </phaustin/pybind11_test_/tree/linux>`_
 
-conda build .
+* OSX   </phaustin/pybind11_test_/tree/osx>`_
+                                                  
+
 
