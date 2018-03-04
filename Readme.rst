@@ -1,19 +1,31 @@
 Building pybind11 extensions using pip or conda
 +++++++++++++++++++++++++++++++++++++++++++++++
 
-Using pip
-=========
+Create an environment named test using miniconda3 (working with 4.10)
+=====================================================================
 
-* Using miniconda3 4.10
+* For osx::
 
-* For osx:
-
-    wget https://raw.githubusercontent.com/phaustin/pybind11_test/environment_osx.yml
+    wget https://raw.githubusercontent.com/phaustin/pybind11_test/master/environment_osx.yml
     conda env create -f environment_osx.yml
+
+* For linux::
+
+    wget https://raw.githubusercontent.com/phaustin/pybind11_test/master/environment_linux.yml
+    conda env create -f environment_linux.yml
+
+* Activate it::
 
     conda activate test
 
-    CXX=$(which $CXX);pip install git+https://github.com/phaustin/pybind11_test.git@osx#egg=pybind_test
+Using pip
+=========
+    
+* Do::
+    
+    conda activate test
+
+    CXX=$(which $CXX);pip install git+https://github.com/phaustin/pybind11_test.git#egg=pybind_test
 
     mkdir test
     cd test
@@ -28,16 +40,14 @@ Using pip
 Using conda
 ===========
 
-* clone the repo and checkout the osx branch::
+* Clone the repo::
 
     git clone https://github.com/phaustin/pybind11_test.git
-    pip uninstall hello-pybind
+    pip uninstall hello-pybind  #(if necessary from above install)
     cd pyind11_test
-    conda env create -f environment_osx.yml (if not created for pip install)
-    conda activate test
     conda build .
 
-* should print out::
+* This should print out::
 
     running run_test.py
     inside hello_pybind __init__.py
